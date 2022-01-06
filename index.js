@@ -113,58 +113,59 @@ let numbers = [10,32,341,3,1,6];
 //array [10,32,341,3,1,6]
 //7---------7-------------7-----------------7
 // includes() function
-  function myIncludes(arr,callback,target)
+  function myIncludes(arr,target)
   {
-    for(let a of arr)
+    for(let i = 0; i < arr.length; i++) 
       {
-        if(callback(a) == arr[a])
+        if(target === arr[i])
           {
             return true;
           }
       }
+    return false;
   }
-  console.log(myIncludes(numbers,callBack,341));
+  console.log(myIncludes(numbers,6));
 //8---------8-------------8-----------------8
 // indexOf() function
-  function myIndexOf(arr, target,callback)
+  function myIndexOf(arr, target)
   {
     for(let i = 0; i < arr.length; i++) 
       {
-        //if(callback(arr[i]) === arr[target])
-        if(callback(arr[i])===target)
+        //if((arr[i]) === arr[target])
+        if(arr[i]===target)
           {
             return i;
           }
       }
     return -1;
   }
-  console.log(myIndexOf(numbers,6,callBack));
+  console.log(myIndexOf(numbers,6));
 //array [10,32,341,3,1,6]
 //9---------9-------------9-----------------9
 // push() function
-  function myPush(arr, elementToAdd, callback)
+  function myPush(arr, elementToAdd)
   {
     let newArray = [];
    // newArray = arr.concat(elementToAdd);
     newArray = [...arr,elementToAdd];
-    return callback(newArray);
+    return newArray;
   }
-  console.log(myPush(numbers,700,callBack));
+  console.log(myPush(numbers,700));
 //10--------10------------10----------------
 // lastIndexOf() function
 //incomplete.........
-  function myLastIndexOf(arr, target, callback)
+  function myLastIndexOf(arr, target)
   {
     for(let i = 0; i < arr.length; i++) 
       {
         if(arr[i]===target)
         {
-          return callback(arr[i]);
+          return arr[i];
         }
       }
         return -1;
   }
-console.log(myLastIndexOf(numbers,6,callBack));
+console.log(myLastIndexOf(numbers,6));
 //array [10,32,341,3,1,6]
 //11--------11------------11----------------
 function grabKeys(){}
