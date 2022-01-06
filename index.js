@@ -153,17 +153,17 @@ let numbers = [10,32,341,3,1,6];
   console.log(myPush(numbers,700));
 //10--------10------------10----------------
 // lastIndexOf() function
-//incomplete.........
   function myLastIndexOf(arr, target)
   {
+    let start = -1;
     for(let i = 0; i < arr.length; i++) 
       {
         if(arr[i]===target)
         {
-          return arr[i];
+          start = i;
         }
       }
-        return -1;
+        return start;
   }
 console.log(myLastIndexOf(numbers,6));
 //array [10,32,341,3,1,6]
